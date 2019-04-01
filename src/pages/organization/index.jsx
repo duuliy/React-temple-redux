@@ -4,6 +4,7 @@ import { Button } from 'antd';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";  //取方法
 import { addtest,addtest2 } from "../../actions/organization";
+import { FormattedMessage,injectIntl } from 'react-intl';
 
 
 @connect(
@@ -38,10 +39,12 @@ class organization extends PureComponent {
                 {(console.log(come),come)}
                 {name}
                 {loading}
+                <br/>
+                <FormattedMessage id={`organization`}></FormattedMessage>
               </div>
             </div>
       );
     }
 }
 
-export default organization;
+export default injectIntl(organization);

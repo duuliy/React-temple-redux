@@ -1,6 +1,3 @@
-
-
-
 /**
  * @method filterDate  转换时间格式
  * @param {number} time 需要转换的时间格式

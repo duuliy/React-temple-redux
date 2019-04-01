@@ -1,0 +1,29 @@
+{
+    "userName or organization":"사용자 이름 또는 조직을 입력하십시오",
+    "query":"검색",
+    "reset":"재설정",
+    "add organization":"조직 추가",
+    "organization":"조직",
+    "superior":"상급 기관",
+    "remaining words":"남은 단어들",
+    "remaining pages":"남은 페이지",
+    "due date":"기한",
+    "contact":"연락책임자",
+    "phone":"전화 번호",
+    "email":"이메일",
+    "create date":"생성 시간",
+    "describe":"설명",
+    "operation":"조작",
+    "detail":"세부 정보",
+    "delete":"삭제",
+  
+  
+    "go home":"홈으로",
+    "update password":"비밀번호 변경",
+    "quick create user":"신속한 사용자 생성",
+    "logout":"로그아웃",
+  
+    "Chinese":"중국어",
+    "English":"영문",
+    "Korean":"한국어"
+  }

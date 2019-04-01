@@ -1,0 +1,29 @@
+{
+    "userName or organization":"Please enter username or organization name",
+    "query":"Query",
+    "reset":"Reset",
+    "add organization":"Add organization",
+    "organization":"Organization",
+    "superior":"Parent organization",
+    "remaining words":"Remaining words",
+    "remaining pages":"Remaining pages",
+    "due date":"Due date",
+    "contact":"Contact",
+    "phone":"Phone number",
+    "email":"Email",
+    "create date":"Creation date",
+    "describe":"Description",
+    "operation":"Operation",
+    "detail":"Detail",
+    "delete":"Delete",
+  
+  
+    "go home":"Home",
+    "update password":"Modify password",
+    "quick create user":"Quick User",
+    "logout":"Sign out",
+  
+    "Chinese":"Chinese",
+    "English":"English",
+    "Korean":"Korean"
+  }

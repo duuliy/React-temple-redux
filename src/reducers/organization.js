@@ -22,7 +22,8 @@ const defaultState = {
     toolName: "999",
     name: "888",
     repository: {}
-  }
+  },
+  intlLocale:""
 };
 export default function(state = defaultState, action) {
   const { type, data, loading } = action;
@@ -39,6 +40,12 @@ export default function(state = defaultState, action) {
       return {
         ...state,
         data1:data,
+        loading
+      };
+      case 'Langchange':
+      return {
+        ...state,
+        intlLocale:data,
         loading
       };
     default:

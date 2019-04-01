@@ -1,0 +1,29 @@
+{
+    "userName or organization":"请输入用户名或组织机构",
+    "query":"查询",
+    "reset":"重置",
+    "add organization":"添加组织机构",
+    "organization":"组织机构",
+    "superior":"上级机构",
+    "remaining words":"剩余字数",
+    "remaining pages":"剩余页数",
+    "due date":"到期日期",
+    "contact":"联系人",
+    "phone":"电话号码",
+    "email":"邮箱",
+    "create date":"创建日期",
+    "describe":"描述",
+    "operation":"操作",
+    "detail":"详情",
+    "delete":"删除",
+  
+  
+    "go home":"回到首页",
+    "update password":"修改密码",
+    "quick create user":"快速创建用户",
+    "logout":"退出登录",
+  
+    "Chinese":"中文",
+    "English":"英文",
+    "Korean":"韩文"
+  }

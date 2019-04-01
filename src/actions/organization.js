@@ -28,6 +28,18 @@ export function addtest () {
     }
   };
 
+  export function langch (data) {
+    return async function (dispatch) {
+        console.log(666)
+        dispatch({
+            type: 'Langchange',
+            data:data,
+            loading: false
+          });
+    }
+  };
+
+
   export function addtest2 () {
     const param={
       toolName: "999",

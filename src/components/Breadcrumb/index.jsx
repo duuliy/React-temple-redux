@@ -3,7 +3,7 @@ import { Breadcrumb } from 'antd';
 import './style.less';
 class MyBreadcrumb extends Component {
     render() {
-        let pathList = window.location.pathname.slice(1).split('/');
+        let pathList = window.location.hash.split('#')[1].slice(1).split('/');
         return (
             <Breadcrumb className={`MyBreadcrumb`}>
                 {
