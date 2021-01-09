@@ -41,6 +41,7 @@ class App extends PureComponent {
     const { antdLocale,intlText } = this.state;
     const {intlLocale}=this.props;
     console.log(intlLocale)
+    console.log(666)
     // moment.locale(intlText);
     // const changeLocale = e => {
     //     this.setState({

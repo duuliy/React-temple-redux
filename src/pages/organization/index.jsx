@@ -28,6 +28,7 @@ class organization extends PureComponent {
         PrefixCls: 'organization',
     };
     render() {
+      console.log(777)
       const {PrefixCls} =this.state;
       const {addtest,addtest2,data: { name },loading,come} =this.props;
       return (
