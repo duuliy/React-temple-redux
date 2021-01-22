@@ -1,63 +1,48 @@
-import React, {PureComponent,Fragment,Suspense} from 'react';
-import { Layout,Spin } from 'antd';
-import { Route,Redirect,Switch,withRouter } from "react-router-dom";
-import config from '@src/utils/config.js';
+import React, { PureComponent } from 'react'
+import './styles.less'
+import axios from 'axios'
+import api from '@s/api'
+import { connect } from 'umi'
 
-import SiderView from '@components/SiderView'
-import HeaderView from '@components/HeaderView'
-import Footer from '@components/Footer'
-import ContentView from '@components/ContentView'
-import Breadcrumb from '@components/Breadcrumb'
-
-
-@withRouter
-class home extends PureComponent {
-    state = {
-        collapsed: false,
-    };
-
-    toggle = () => {
-        this.setState({
-            collapsed: !this.state.collapsed
-        });
-    };
-
-    render() {
-        const { collapsed } = this.state;
-        const paddingNum = collapsed ? 80 : 200;
-        if(this.props.location.pathname === `/home`){
-            return(
-                <Redirect to={`/home/organization`}></Redirect>
-            )
-        }
-        return (
-            <Fragment>
-              <Layout style={ {paddingLeft:paddingNum,transition:`all .2s` } }>
-                <SiderView collapsed={collapsed} location={this.props.location}></SiderView>
-                <Layout>
-                  <HeaderView collapsed={collapsed} changeCollapsed={this.toggle}></HeaderView>
-                  <Breadcrumb></Breadcrumb>
-                  <ContentView>
-                    <Suspense fallback={<Spin tip='loading...' />}>
-                      <Switch>
-                          {this.props.routes.map((item,index) => {
-                            return(
-                                  <Route
-                                    key={index}
-                                    path={item.path}
-                                    exact={item.exact}
-                                    component={item.component}
-                                  ></Route>
-                                )})}
-                      </Switch>
-                    </Suspense>
-                  </ContentView>
-                  <Footer footer={config.copyright} />
-                </Layout>
-              </Layout>
-            </Fragment>
-        );
+class IndexPage extends PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
+      testObj: {
+        a: 1,
+        b: 2,
+      },
     }
+  }
+  render() {
+    return (
+      <div className="hhh">
+        <div className="yyy">首页</div>
+      </div>
+    )
+  }
+  async componentDidMount() {
+    //mock使用
+    axios({
+      method: 'get',
+      url: '/apc/users',
+    }).then(res => {
+      // console.log(res.data)
+    })
+    api.testMockAndRequest().then(res => {
+      console.log(res)
+    })
+
+    // var arr2 = [1, 2, [3, 4, [5, 6]]];
+    // console.log(arr2.flat(Infinity));
+    // console.log(this.props.count);
+    await this.props.dispatch({ type: 'common/save', payload: { count: 1 } })
+    // console.log(this.props.count);
+  }
 }
 
-export default home;
+IndexPage.title = 'duuliy2 Page'
+
+export default connect(({ common }) => ({
+  count: common.count,
+}))(IndexPage)

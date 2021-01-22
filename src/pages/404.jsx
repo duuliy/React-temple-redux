@@ -1,7 +1,3 @@
-import React from 'react';
-
 export default () => {
-    return (
-          <div>404</div>
-    );
-  };
+  return <div>这个是404页面</div>;
+};

@@ -1,0 +1,154 @@
+@import 'vars.less';
+html,
+body {
+  font-family: PingFang SC, Microsoft YaHei, Helvetica Neue, Helvetica, Hiragino Sans GB, SimSun, sans-serif;
+  height: 100vh;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*添加*/
+
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+tbody,
+article,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* 清除a的默认样式  */
+a,
+a:hover,
+a:active,
+a:link {
+  text-decoration: none;
+  color: #333;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* 浮动与清除浮动 */
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+table tr td:not(.ant-table-selection-column) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.no-padding {
+  padding: 0 !important;
+}
+
+.disable-btn {
+  color: #bbb !important;
+}
+
+/*水平垂直居中(不确定宽高)*/
+.wh-center {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+/*垂直居中(不确定高)*/
+.h-center {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+//禁止样式
+.disable {
+  border-color: #c2c2c2;
+  color: #c2c2c2;
+  cursor: not-allowed;
+
+  &:hover {
+    border-color: #c2c2c2;
+    color: #c2c2c2;
+  }
+}
+
+// 居中按钮
+.button-center {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+
+  .ant-btn-primary {
+    width: 90px;
+    border-radius: 2px;
+    margin-right: 30px;
+  }
+
+  .ant-btn-background-ghost {
+    margin-right: 0;
+  }
+}
+
+//文字超长，截断，以...代替
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
